@@ -33,6 +33,7 @@ const init = function () {
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
 };
+
 init();
 
 const switchPlayer = function () {
@@ -53,7 +54,7 @@ btnRoll.addEventListener('click', function () {
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${dice}.png`;
 
-    // 3. Check for rolled 1
+
     if (dice !== 1) {
       // Add dice to current score
       currentScore += dice;
@@ -71,7 +72,7 @@ btnHold.addEventListener('click', function () {
   if (playing) {
     // 1. Add current score to active player's score
     scores[activePlayer] += currentScore;
-    // scores[1] = scores[1] + currentScore
+
 
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
